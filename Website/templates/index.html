@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title>Major_Web</title>
+
+  <style media="screen">
+    body{
+      background-image: url("/static/indpg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+
+    }
+
+    .heading {
+      font-size: 50px;
+      margin-left:50px;
+      font-family:'Serif', Times New Roman;
+      color:#ADD8E6;
+      margin-top: 80px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-decoration-color: #A4BE7B;
+    }
+
+    p{
+      margin-top: 100px;
+      background-color:none;
+      font-size: 40px;
+      text-align: left;
+      margin-left:170px;
+      padding-left:50px;
+      font-family: 'Serif', Times New Roman; color:#FCF5E5;
+    }
+
+    .upload-container {
+      background-color: none;
+      text-align: left;
+      width: 50%;
+      height: 200px;
+      padding-top: 24px;
+      margin-left:220px;
+    }
+
+    .upload {
+      display: block;
+      width: 40%;
+      border-radius: 20px;
+      font-size: 20px;
+      background-color: rgb(255, 252, 252);
+      border: 3px solid #7F669D;
+      margin: auto;
+    }
+
+    ::-webkit-file-upload-button {
+      color: white;
+      border-radius: 20px;
+      padding: 25px;
+      border: 2px solid rgb(129, 129, 129);
+      background-color: rgb(129, 129, 129);
+    }
+
+    ::-webkit-file-upload-button:hover {
+      border-radius: 25px;
+      border: 2px solid #EB6440;
+    }
+
+    .predict {
+      display: block;
+      height: 35px;
+      width: 20%;
+      color: #FFFFFF;
+      background-color: #3C4048;
+      border: 0px;
+      margin: 5px auto 10px;
+      border-radius: 20px;
+    }
+
+    a:link {
+    background-color: #FF0063;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    }
+
+    a:visited, a:hover, a:active {
+      color: #FFFFFF;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1 class="heading">Predicting Disease Based On Chest X-ray</h1>
+  <p>Upload chest X-ray</p>
+  <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+    <div class="upload-container" style="position:absolute;left:-150px;">
+      <input type="file" name="image" class="upload"><br>
+      <input class="predict" type="submit" value="Submit"><br><br><br><br><br>
+    </div>
+  </form>
+</body>
+
+</html>
